@@ -1,0 +1,16 @@
+Simple check json syntax using golang, faster than ``jq''.
+
+#+begin_src
+# using encoding/json
+$ jc <yourJSONFile>
+# using ugorji/go/codec
+$ jk <yourJSONFile>
+#+end_src
+
+Using docker
+
+#+begin_src
+$ docker build -t jc
+$ docker run --rm -v $(pwd):/app jc jc /app/test.json
+$ docker run --rm -v $(pwd):/app jc jk /app/test.json
+#+end_src
